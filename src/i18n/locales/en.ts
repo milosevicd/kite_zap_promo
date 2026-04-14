@@ -87,11 +87,11 @@ const en: Dict = {
     note: "Built by a kiter who got tired of scrolling through WhatsApp groups endlessly, looking for a 9m kite, ending up buying an 8m because he could not find what he was looking for.",
   },
   cta: {
-    title: "Help shape KiteZap",
+    title: "Join us in shaping KiteZap",
     subtitle:
-      "We're validating interest before we build. Pick the option that fits you.",
+      "We're validating interest before we build it together. Pick the option that fits you.",
     betaLabel: "I want to try it early",
-    betaSub: "Join the beta — test the platform and help shape it.",
+    betaSub: "Join the beta — test the platform and shape it with us.",
     notifyLabel: "Just let me know when it's ready",
     notifySub: "We'll ping you once on launch day. No spam.",
     whatsappLabel: "WhatsApp number",

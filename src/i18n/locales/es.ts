@@ -87,11 +87,11 @@ const es: Dict = {
     note: "Hecho por un kiter que se cansó de hacer scroll sin fin en grupos de WhatsApp buscando una cometa de 9m, acabando comprando una de 8m porque no encontraba lo que buscaba.",
   },
   cta: {
-    title: "Ayuda a dar forma a KiteZap",
+    title: "Dale forma a KiteZap con nosotros",
     subtitle:
-      "Estamos validando el interés antes de construir. Elige la opción que mejor te encaje.",
+      "Estamos validando el interés antes de construirla juntos. Elige la opción que mejor te encaje.",
     betaLabel: "Quiero probarlo ya",
-    betaSub: "Únete a la beta — prueba la plataforma y ayuda a moldearla.",
+    betaSub: "Únete a la beta — prueba la plataforma y dale forma con nosotros.",
     notifyLabel: "Avísame cuando esté listo",
     notifySub: "Te avisamos el día del lanzamiento. Nada de spam.",
     whatsappLabel: "Número de WhatsApp",
