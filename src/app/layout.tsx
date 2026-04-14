@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "App",
-  description: "",
+  title: "KiteZap — Second-hand kite gear in Portugal",
+  description:
+    "Tired of digging through WhatsApp groups? KiteZap lets you search and filter real second-hand kite listings — find exactly what you need in seconds.",
 };
 
 export default function RootLayout({
