@@ -1,12 +1,20 @@
 "use client";
 
+import GB from "country-flag-icons/react/3x2/GB";
+import PT from "country-flag-icons/react/3x2/PT";
+import ES from "country-flag-icons/react/3x2/ES";
+
 import { useLocale } from "@/i18n/LocaleProvider";
 import type { Locale } from "@/i18n/types";
 
-const OPTIONS: Array<{ code: Locale; flag: string; labelKey: keyof ReturnType<typeof useLocale>["t"]["nav"] }> = [
-  { code: "en", flag: "🇬🇧", labelKey: "english" },
-  { code: "pt", flag: "🇵🇹", labelKey: "portuguese" },
-  { code: "es", flag: "🇪🇸", labelKey: "spanish" },
+const OPTIONS: Array<{
+  code: Locale;
+  Flag: typeof GB;
+  labelKey: keyof ReturnType<typeof useLocale>["t"]["nav"];
+}> = [
+  { code: "en", Flag: GB, labelKey: "english" },
+  { code: "pt", Flag: PT, labelKey: "portuguese" },
+  { code: "es", Flag: ES, labelKey: "spanish" },
 ];
 
 export function LanguageSwitcher() {
@@ -16,6 +24,7 @@ export function LanguageSwitcher() {
     <div className="flex items-center gap-1 text-sm">
       {OPTIONS.map((opt) => {
         const active = opt.code === locale;
+        const { Flag } = opt;
         return (
           <button
             key={opt.code}
@@ -28,9 +37,10 @@ export function LanguageSwitcher() {
                 : "text-slate-600 hover:text-slate-900"
             }`}
           >
-            <span aria-hidden className="text-base leading-none">
-              {opt.flag}
-            </span>
+            <Flag
+              title={t.nav[opt.labelKey]}
+              className="block h-4 w-6 rounded-sm shadow-sm ring-1 ring-slate-200"
+            />
             <span>{t.nav[opt.labelKey]}</span>
           </button>
         );
