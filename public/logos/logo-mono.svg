@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="KiteZap logo (monochrome)">
+  <title>KiteZap mono</title>
+  <g fill="currentColor">
+    <path d="M 20 100 Q 120 -60 220 100 Q 120 10 20 100 Z"/>
+    <path d="M 128 62 L 92 138 L 116 138 L 100 220 L 154 142 L 130 142 Z"/>
+  </g>
+</svg>

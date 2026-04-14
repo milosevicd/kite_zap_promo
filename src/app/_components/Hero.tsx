@@ -13,7 +13,7 @@ export function Hero() {
       <div className="mx-auto max-w-6xl px-4 pt-14 pb-20 sm:px-6 sm:pt-20 sm:pb-28">
         <div className="max-w-3xl">
           <span className="inline-flex items-center gap-1.5 rounded-full bg-sky-100 px-3 py-1 text-xs font-medium text-sky-800">
-            <span aria-hidden>🪁</span> Portugal · Beta
+            <img src="/logos/logo.svg" alt="" aria-hidden className="h-3.5 w-3.5" /> Portugal · Beta
           </span>
           <h1 className="mt-5 text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
             {t.hero.headline}{" "}

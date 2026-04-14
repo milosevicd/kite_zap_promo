@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="KiteZap logo">
+  <title>KiteZap</title>
+  <!-- Kitesurfing kite: crescent arc (bow shape) -->
+  <path d="M 20 100 Q 120 -60 220 100 Q 120 10 20 100 Z"
+        fill="#0EA5E9"
+        stroke="#0C4A6E"
+        stroke-width="3"
+        stroke-linejoin="round"/>
+  <!-- Zap: lightning bolt as the line to the bar -->
+  <path d="M 128 62 L 92 138 L 116 138 L 100 220 L 154 142 L 130 142 Z"
+        fill="#FACC15"
+        stroke="#0C4A6E"
+        stroke-width="3"
+        stroke-linejoin="round"/>
+</svg>

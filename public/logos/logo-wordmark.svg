@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 240" role="img" aria-label="KiteZap">
+  <title>KiteZap</title>
+  <!-- Mark -->
+  <path d="M 20 100 Q 120 -60 220 100 Q 120 10 20 100 Z"
+        fill="#0EA5E9" stroke="#0C4A6E" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M 128 62 L 92 138 L 116 138 L 100 220 L 154 142 L 130 142 Z"
+        fill="#FACC15" stroke="#0C4A6E" stroke-width="3" stroke-linejoin="round"/>
+  <!-- Wordmark -->
+  <text x="270" y="160"
+        font-family="Inter, 'Segoe UI', system-ui, sans-serif"
+        font-weight="800"
+        font-size="120"
+        letter-spacing="-4"
+        fill="#0C4A6E">Kite<tspan fill="#FACC15" stroke="#0C4A6E" stroke-width="2" paint-order="stroke">Zap</tspan></text>
+</svg>
