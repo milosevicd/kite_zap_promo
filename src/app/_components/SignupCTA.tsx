@@ -16,7 +16,7 @@ export function SignupCTA() {
 
   function pick(o: Option) {
     setOption(o);
-    setStep("form");
+    if (step !== "followup" && step !== "done") setStep("form");
   }
 
   function onSubmit(e: FormEvent<HTMLFormElement>) {
@@ -41,39 +41,45 @@ export function SignupCTA() {
         </div>
 
         <div className="mt-10 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
-          {step === "choose" && (
-            <div className="grid gap-4 sm:grid-cols-2">
-              <button
-                type="button"
-                onClick={() => pick("beta")}
-                className="group rounded-xl border-2 border-sky-200 bg-sky-50 p-5 text-left transition-colors hover:border-sky-400 hover:bg-sky-100"
-              >
-                <p className="text-base font-bold text-sky-900">
-                  {t.cta.betaLabel}
-                </p>
-                <p className="mt-1 text-sm text-sky-900/70">{t.cta.betaSub}</p>
-                <span className="mt-3 inline-flex items-center text-sm font-semibold text-sky-700 group-hover:translate-x-0.5 transition-transform">
-                  →
-                </span>
-              </button>
-              <button
-                type="button"
-                onClick={() => pick("notify")}
-                className="group rounded-xl border-2 border-slate-200 bg-white p-5 text-left transition-colors hover:border-slate-400 hover:bg-slate-50"
-              >
-                <p className="text-base font-bold text-slate-900">
-                  {t.cta.notifyLabel}
-                </p>
-                <p className="mt-1 text-sm text-slate-600">{t.cta.notifySub}</p>
-                <span className="mt-3 inline-flex items-center text-sm font-semibold text-slate-700 group-hover:translate-x-0.5 transition-transform">
-                  →
-                </span>
-              </button>
-            </div>
-          )}
+          <div className="grid gap-4 sm:grid-cols-2">
+            <button
+              type="button"
+              onClick={() => pick("beta")}
+              className={`group rounded-xl border-2 p-5 text-left transition-colors ${
+                option === "beta"
+                  ? "border-sky-400 bg-sky-100"
+                  : "border-sky-200 bg-sky-50 hover:border-sky-400 hover:bg-sky-100"
+              }`}
+            >
+              <p className="text-base font-bold text-sky-900">
+                {t.cta.betaLabel}
+              </p>
+              <p className="mt-1 text-sm text-sky-900/70">{t.cta.betaSub}</p>
+              <span className="mt-3 inline-flex items-center text-sm font-semibold text-sky-700 group-hover:translate-x-0.5 transition-transform">
+                →
+              </span>
+            </button>
+            <button
+              type="button"
+              onClick={() => pick("notify")}
+              className={`group rounded-xl border-2 p-5 text-left transition-colors ${
+                option === "notify"
+                  ? "border-slate-400 bg-slate-50"
+                  : "border-slate-200 bg-white hover:border-slate-400 hover:bg-slate-50"
+              }`}
+            >
+              <p className="text-base font-bold text-slate-900">
+                {t.cta.notifyLabel}
+              </p>
+              <p className="mt-1 text-sm text-slate-600">{t.cta.notifySub}</p>
+              <span className="mt-3 inline-flex items-center text-sm font-semibold text-slate-700 group-hover:translate-x-0.5 transition-transform">
+                →
+              </span>
+            </button>
+          </div>
 
           {step === "form" && (
-            <form onSubmit={onSubmit} className="space-y-4">
+            <form onSubmit={onSubmit} className="mt-6 space-y-4">
               <p className="text-sm font-semibold text-slate-900">
                 {option === "beta" ? t.cta.betaLabel : t.cta.notifyLabel}
               </p>
@@ -123,7 +129,7 @@ export function SignupCTA() {
           )}
 
           {step === "followup" && (
-            <div className="text-center">
+            <div className="mt-6 text-center">
               <p className="text-lg font-semibold text-slate-900">
                 {t.cta.followUp}
               </p>
@@ -154,7 +160,7 @@ export function SignupCTA() {
           )}
 
           {step === "done" && (
-            <div className="text-center">
+            <div className="mt-6 text-center">
               <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-emerald-100 text-2xl">
                 <span aria-hidden>✓</span>
               </div>

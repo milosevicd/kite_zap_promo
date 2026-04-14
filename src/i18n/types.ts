@@ -8,6 +8,7 @@ export type Dict = {
   };
   hero: {
     headline: string;
+    country: string;
     subhead: string;
     ctaBeta: string;
     ctaNotify: string;

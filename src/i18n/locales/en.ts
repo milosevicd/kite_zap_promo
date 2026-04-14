@@ -7,7 +7,8 @@ const en: Dict = {
     spanish: "Español",
   },
   hero: {
-    headline: "The marketplace for second-hand kite gear in Portugal",
+    headline: "The best place for kite gear in",
+    country: "Portugal",
     subhead:
       "Tired of digging through WhatsApp groups? KiteZap lets you search and filter real listings — find exactly what you need in seconds.",
     ctaBeta: "I want to try it early",
