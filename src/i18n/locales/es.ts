@@ -44,6 +44,7 @@ const es: Dict = {
       location: "Ubicación",
       year: "Año",
       express: "Me interesa",
+      viewDetails: "Ver detalles",
     },
     conditions: {
       new: "Nuevo",
@@ -83,6 +84,7 @@ const es: Dict = {
     badge: "100% gratis",
     title: "KiteZap es gratis. Siempre.",
     body: "Sin tarifas de anuncio, sin tarifas de transacción, sin comisiones. El precio que acordáis es entre tú y la otra persona — la plataforma nunca lo toca.",
+    note: "Hecho por un kiter que se cansó de hacer scroll sin fin en grupos de WhatsApp buscando una cometa de 9m, acabando comprando una de 8m porque no encontraba lo que buscaba.",
   },
   cta: {
     title: "Ayuda a dar forma a KiteZap",
@@ -105,9 +107,6 @@ const es: Dict = {
     thanksTitle: "Gracias — estás en la lista.",
     thanksBody:
       "Te contactaremos por WhatsApp. Mientras tanto, cuéntaselo a un amigo kiter harto de hacer scroll en grupos.",
-  },
-  footer: {
-    note: "Hecho por un kiter que se cansó de hacer scroll en grupos de WhatsApp buscando una barra, no encontrarla nunca, y luego ver a otro comprarla 10 minutos después. Tenía que haber una forma mejor.",
   },
 };
 

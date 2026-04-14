@@ -44,6 +44,7 @@ const en: Dict = {
       location: "Location",
       year: "Year",
       express: "I'm interested",
+      viewDetails: "View details",
     },
     conditions: {
       new: "New",
@@ -83,6 +84,7 @@ const en: Dict = {
     badge: "100% free",
     title: "KiteZap is free. Always.",
     body: "No listing fees, no transaction fees, no commissions. The price you agree on is between you and the other person — the platform never touches it.",
+    note: "Built by a kiter who got tired of scrolling through WhatsApp groups endlessly, looking for a 9m kite, ending up buying an 8m because he could not find what he was looking for.",
   },
   cta: {
     title: "Help shape KiteZap",
@@ -105,9 +107,6 @@ const en: Dict = {
     thanksTitle: "Thanks — you're on the list.",
     thanksBody:
       "We'll be in touch on WhatsApp. In the meantime, tell a kiter friend who's tired of scrolling groups.",
-  },
-  footer: {
-    note: "Built by a kiter who got tired of scrolling through WhatsApp groups looking for a bar, never finding it, and then watching someone else snap it up 10 minutes later. There had to be a better way.",
   },
 };
 

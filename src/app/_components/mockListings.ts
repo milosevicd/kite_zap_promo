@@ -12,7 +12,7 @@ export type MockListing = {
   price: number;
   condition: ConditionKey;
   location: string;
-  emoji: string;
+  image: string;
 };
 
 export const MOCK_LISTINGS: MockListing[] = [
@@ -25,7 +25,7 @@ export const MOCK_LISTINGS: MockListing[] = [
     price: 950,
     condition: "excellent",
     location: "Cascais",
-    emoji: "🪁",
+    image: "/images/duotone-kite.png",
   },
   {
     id: "2",
@@ -36,7 +36,7 @@ export const MOCK_LISTINGS: MockListing[] = [
     price: 280,
     condition: "good",
     location: "Lisboa",
-    emoji: "🎛️",
+    image: "/images/north-bar.png",
   },
   {
     id: "3",
@@ -47,7 +47,7 @@ export const MOCK_LISTINGS: MockListing[] = [
     price: 620,
     condition: "new",
     location: "Guincho",
-    emoji: "🏄",
+    image: "/images/twin-tip-board.png",
   },
   {
     id: "4",
@@ -58,6 +58,6 @@ export const MOCK_LISTINGS: MockListing[] = [
     price: 180,
     condition: "good",
     location: "Viana do Castelo",
-    emoji: "🧰",
+    image: "/images/harness.jpg",
   },
 ];

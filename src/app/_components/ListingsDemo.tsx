@@ -1,11 +1,14 @@
 "use client";
 
+import Image from "next/image";
+import { useState } from "react";
 import { useLocale } from "@/i18n/LocaleProvider";
 import { MOCK_LISTINGS } from "./mockListings";
 
 export function ListingsDemo() {
   const { t } = useLocale();
   const filters = t.listings.filters;
+  const [searchQuery, setSearchQuery] = useState("");
 
   const filterRows: Array<{ label: string; key: string }> = [
     { label: filters.type, key: "type" },
@@ -28,7 +31,10 @@ export function ListingsDemo() {
         </div>
 
         <div className="mt-8">
-          <div className="relative">
+          <form
+            onSubmit={(e) => e.preventDefault()}
+            className="relative"
+          >
             <span
               aria-hidden
               className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"
@@ -37,11 +43,32 @@ export function ListingsDemo() {
             </span>
             <input
               type="text"
-              readOnly
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
               placeholder={t.listings.searchPlaceholder}
-              className="w-full rounded-xl border border-slate-200 bg-white py-3 pl-11 pr-4 text-base text-slate-900 shadow-sm placeholder:text-slate-400 focus:border-sky-400 focus:outline-none"
+              className="w-full rounded-xl border border-slate-200 bg-white py-3 pl-11 pr-14 text-base text-slate-900 shadow-sm placeholder:text-slate-400 focus:border-sky-400 focus:outline-none"
             />
-          </div>
+            <button
+              type="submit"
+              aria-label={t.listings.searchPlaceholder}
+              className="absolute right-2 top-1/2 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-lg bg-sky-600 text-white shadow-sm transition-colors hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-sky-400 focus:ring-offset-1"
+            >
+              <svg
+                aria-hidden
+                viewBox="0 0 20 20"
+                fill="none"
+                className="h-4 w-4"
+              >
+                <path
+                  d="M4 10H16M16 10L11 5M16 10L11 15"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button>
+          </form>
         </div>
 
         <div className="mt-6 grid gap-6 lg:grid-cols-[260px_1fr]">
@@ -70,8 +97,56 @@ export function ListingsDemo() {
                 key={l.id}
                 className="flex flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition-shadow hover:shadow-md"
               >
-                <div className="flex h-32 items-center justify-center bg-gradient-to-br from-sky-100 to-sky-50 text-5xl">
-                  <span aria-hidden>{l.emoji}</span>
+                <div className="group relative h-40 w-full bg-gradient-to-br from-sky-100 to-sky-50">
+                  <Image
+                    src={l.image}
+                    alt={`${l.brand} ${l.model}`}
+                    fill
+                    sizes="(min-width: 640px) 50vw, 100vw"
+                    className="object-contain p-2"
+                  />
+                  <button
+                    type="button"
+                    aria-label="Previous image"
+                    tabIndex={-1}
+                    className="absolute left-2 top-1/2 flex h-7 w-7 -translate-y-1/2 items-center justify-center rounded-full bg-white/80 text-slate-700 shadow-sm ring-1 ring-slate-200 backdrop-blur transition hover:bg-white"
+                  >
+                    <svg
+                      aria-hidden
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      className="h-4 w-4"
+                    >
+                      <path
+                        d="M12.5 5L7.5 10L12.5 15"
+                        stroke="currentColor"
+                        strokeWidth="1.75"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    type="button"
+                    aria-label="Next image"
+                    tabIndex={-1}
+                    className="absolute right-2 top-1/2 flex h-7 w-7 -translate-y-1/2 items-center justify-center rounded-full bg-white/80 text-slate-700 shadow-sm ring-1 ring-slate-200 backdrop-blur transition hover:bg-white"
+                  >
+                    <svg
+                      aria-hidden
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      className="h-4 w-4"
+                    >
+                      <path
+                        d="M7.5 5L12.5 10L7.5 15"
+                        stroke="currentColor"
+                        strokeWidth="1.75"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </button>
                 </div>
                 <div className="flex flex-1 flex-col p-4">
                   <div className="flex items-start justify-between gap-2">
@@ -106,6 +181,13 @@ export function ListingsDemo() {
                   >
                     {t.listings.card.express}
                   </button>
+                  <a
+                    href="#"
+                    onClick={(e) => e.preventDefault()}
+                    className="mt-2 text-center text-sm font-medium text-sky-700 hover:text-sky-900 hover:underline"
+                  >
+                    {t.listings.card.viewDetails} →
+                  </a>
                 </div>
               </article>
             ))}

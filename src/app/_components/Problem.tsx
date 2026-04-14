@@ -2,6 +2,63 @@
 
 import { useLocale } from "@/i18n/LocaleProvider";
 
+const icons = [
+  // Vanishing listings — hourglass with falling sand
+  (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.75}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="h-6 w-6"
+      aria-hidden
+    >
+      <path d="M6 3h12" />
+      <path d="M6 21h12" />
+      <path d="M7 3v3a5 5 0 0 0 2 4l3 2 3-2a5 5 0 0 0 2-4V3" />
+      <path d="M7 21v-3a5 5 0 0 1 2-4l3-2 3 2a5 5 0 0 1 2 4v3" />
+      <path d="M10 7.5h4" />
+    </svg>
+  ),
+  // No search / endless scroll — magnifying glass over wavy lines
+  (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.75}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="h-6 w-6"
+      aria-hidden
+    >
+      <circle cx="10.5" cy="10.5" r="5.5" />
+      <path d="M14.5 14.5 19 19" />
+      <path d="M8 9.5c.8-.8 1.7-.8 2.5 0s1.7.8 2.5 0" />
+      <path d="M8 12c.8-.8 1.7-.8 2.5 0s1.7.8 2.5 0" />
+    </svg>
+  ),
+  // Already snapped up — price tag with a checkmark (sold)
+  (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.75}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="h-6 w-6"
+      aria-hidden
+    >
+      <path d="M20.5 12.5 12.5 20.5a2 2 0 0 1-2.8 0L3 13.8V4h9.8l7.7 7.7a2 2 0 0 1 0 2.8Z" />
+      <circle cx="7.5" cy="8.5" r="1.25" />
+      <path d="m9.5 14 2 2 4-4" />
+    </svg>
+  ),
+];
+
 export function Problem() {
   const { t } = useLocale();
 
@@ -17,8 +74,8 @@ export function Problem() {
               key={i}
               className="rounded-xl border border-slate-200 bg-slate-50 p-5 text-slate-700"
             >
-              <span className="mb-3 inline-flex h-8 w-8 items-center justify-center rounded-full bg-white text-sm font-semibold text-slate-500 ring-1 ring-slate-200">
-                {i + 1}
+              <span className="mb-3 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-white text-emerald-600 ring-1 ring-slate-200">
+                {icons[i]}
               </span>
               <p className="text-sm leading-relaxed sm:text-base">{bullet}</p>
             </li>

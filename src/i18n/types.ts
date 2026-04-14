@@ -38,6 +38,7 @@ export type Dict = {
       location: string;
       year: string;
       express: string;
+      viewDetails: string;
     };
     conditions: {
       new: string;
@@ -68,6 +69,7 @@ export type Dict = {
     badge: string;
     title: string;
     body: string;
+    note: string;
   };
   cta: {
     title: string;
@@ -88,8 +90,5 @@ export type Dict = {
     both: string;
     thanksTitle: string;
     thanksBody: string;
-  };
-  footer: {
-    note: string;
   };
 };

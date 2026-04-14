@@ -18,6 +18,9 @@ export function FreeBanner() {
           <p className="mt-3 max-w-2xl text-base text-emerald-50 sm:text-lg">
             {t.free.body}
           </p>
+          <p className="mt-6 max-w-2xl text-sm italic text-emerald-100">
+            {t.free.note}
+          </p>
         </div>
       </div>
     </section>
