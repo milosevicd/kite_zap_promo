@@ -20,7 +20,7 @@ const pt: Dict = {
       "Os anúncios desaparecem no histórico do grupo em minutos",
       "Sem pesquisa, sem filtros — fazes scroll sem fim à espera de ver o material certo",
       "Quando finalmente vês, alguém já o comprou",
-      "Publicas o teu material para vender e não recebes respostas — o teu anúncio afoga-se num dilúvio de mensagens antes que qualquer comprador repare",
+      "Publicas o teu material para vender e não recebes respostas — o teu anúncio afoga-se num oceano de mensagens antes que qualquer comprador repare",
     ],
   },
   listings: {
