@@ -20,6 +20,7 @@ const en: Dict = {
       "Listings vanish into WhatsApp group history within minutes",
       "No search, no filters — you scroll endlessly hoping to spot the right gear",
       "By the time you see it, someone else already snapped it up",
+      "Post your gear for sale and get zero replies — your ad drowns in a flood of messages before any buyer even notices",
     ],
   },
   listings: {

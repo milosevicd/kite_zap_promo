@@ -57,6 +57,23 @@ const icons = [
       <path d="m9.5 14 2 2 4-4" />
     </svg>
   ),
+  // Zero replies — chat bubble with an X inside
+  (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.75}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="h-6 w-6"
+      aria-hidden
+    >
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+      <path d="m9.5 9.5 5 5" />
+      <path d="m14.5 9.5-5 5" />
+    </svg>
+  ),
 ];
 
 export function Problem() {
