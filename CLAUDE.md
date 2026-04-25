@@ -9,3 +9,5 @@ After making any file changes, always commit and push them immediately:
 3. Push to the remote branch (`git push`)
 
 Do this after every task without waiting to be asked.
+
+Never create new branches. Always commit and push to the current existing branch only.
