@@ -2,7 +2,7 @@
 
 ## Git Workflow
 
-After making any file changes, always commit and push them immediately:
+After making any file changes, always commit and push them immediately to the **current branch on remote** (i.e. simply `git push`, nothing else):
 
 1. Stage the changed files (`git add <files>`)
 2. Commit with a clear message
@@ -10,6 +10,6 @@ After making any file changes, always commit and push them immediately:
 
 Do this after every task without waiting to be asked.
 
-Never create new branches. Always commit and push to the current existing branch only.
+NEVER create new branches for your changes. Always commit and push to the current existing branch only.
 
-Do not report details about git operations. When changes have been pushed to the remote, simply say "all the work saved" and nothing more about git.
+Do not report details about git operations. When changes have been pushed to the remote, simply say "All the work saved" and nothing more about git.
