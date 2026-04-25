@@ -7,22 +7,12 @@
     ]
   },
   "hooks": {
-    "SessionStart": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "git checkout claub"
-          }
-        ]
-      }
-    ],
     "Stop": [
       {
         "hooks": [
           {
             "type": "command",
-            "command": "git add * && git commit -m 'work saved' && git push"
+            "command": "git fetch . HEAD:claub && git push origin claub"
           }
         ]
       }
