@@ -15,7 +15,7 @@ const pt: Dict = {
     ctaNotify: "Avisa-me quando estiver pronto",
   },
   problem: {
-    title: "Porquê KiteZap?",
+    title: "Por que o KiteZap é melhor?",
     bullets: [
       "Os anúncios desaparecem no histórico do grupo em minutos",
       "Sem pesquisa, sem filtros — fazes scroll sem fim à espera de ver o material certo",

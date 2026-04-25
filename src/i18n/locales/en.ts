@@ -15,7 +15,7 @@ const en: Dict = {
     ctaNotify: "Just let me know when it's ready",
   },
   problem: {
-    title: "Why KiteZap?",
+    title: "Why is KiteZap better?",
     bullets: [
       "Listings vanish into WhatsApp group history within minutes",
       "No search, no filters — you scroll endlessly hoping to spot the right gear",
